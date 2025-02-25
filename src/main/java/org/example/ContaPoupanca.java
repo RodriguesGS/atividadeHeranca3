@@ -5,6 +5,7 @@ public class ContaPoupanca extends ContaBancaria {
         super(numeroConta, titular, saldo);
     }
 
+    @Override
     public void sacar(double valor) {
         try {
             if (valor > getSaldo())

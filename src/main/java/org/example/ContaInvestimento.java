@@ -5,6 +5,7 @@ public class ContaInvestimento extends ContaBancaria {
         super(numeroConta, titular, saldo);
     }
 
+    @Override
     public void sacar(double valor) {
         try {
             double taxa = valor * 0.02;

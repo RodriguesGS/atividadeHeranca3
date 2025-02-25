@@ -1,16 +1,20 @@
 package org.example;
 
 public class ContaCorrente extends ContaBancaria {
+    private double limiteEspecial = 500.0;
+
     public ContaCorrente(int numeroConta, String titular, double saldo) {
         super(numeroConta, titular, saldo);
     }
 
-    private double limiteEspecial = 500.0;
 
-    public double sacar(double valor) {
-        if(saldo < 0)
-            saldo = limiteEspecial;
-        return saldo - valor;
+    public void sacar(double valor) {
+        try {
+            if (valor > (getSaldo() + limiteEspecial))
+                throw new IllegalArgumentException("Saldo insuficiente!!");
+            setSaldo(getSaldo() - valor);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
     }
-
 }

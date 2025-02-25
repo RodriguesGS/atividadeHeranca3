@@ -1,9 +1,9 @@
 package org.example;
 
 abstract class ContaBancaria {
-    private int numeroConta;
+    public int numeroConta;
     private String titular;
-    private double saldo;
+    public double saldo;
 
     public ContaBancaria(int numeroConta, String titular, double saldo) {
         this.numeroConta = numeroConta;

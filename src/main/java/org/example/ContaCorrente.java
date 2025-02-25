@@ -11,7 +11,7 @@ public class ContaCorrente extends ContaBancaria {
     public void sacar(double valor) {
         try {
             if (valor > (getSaldo() + limiteEspecial))
-                throw new IllegalArgumentException("Saldo insuficiente!!");
+                throw new IllegalArgumentException("Saldo ultrapassou o limite Especial de R$500,00!!");
             setSaldo(getSaldo() - valor);
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());

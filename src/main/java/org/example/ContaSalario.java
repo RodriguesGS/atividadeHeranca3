@@ -7,6 +7,7 @@ public class ContaSalario extends ContaCorrente {
 
     public ContaSalario(int numeroConta, String titular, double saldo) {
         super(numeroConta, titular, saldo);
+        this.mesCorrente = Calendar.MONTH;
     }
 
     @Override
@@ -24,7 +25,7 @@ public class ContaSalario extends ContaCorrente {
             if (qtdMes == 0) {
                 qtdMes++;
             } else {
-                taxa = 5;
+                taxa = 5.00;
             }
 
             double total = valor + taxa;

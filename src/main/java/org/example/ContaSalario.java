@@ -1,5 +1,4 @@
 package org.example;
-
 import java.util.Calendar;
 
 public class ContaSalario extends ContaCorrente {
@@ -9,8 +8,6 @@ public class ContaSalario extends ContaCorrente {
     public ContaSalario(int numeroConta, String titular, double saldo) {
         super(numeroConta, titular, saldo);
     }
-
-
 
     @Override
     public void sacar(double valor) {

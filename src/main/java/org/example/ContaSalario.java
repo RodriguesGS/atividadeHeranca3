@@ -4,6 +4,7 @@ import java.util.Calendar;
 public class ContaSalario extends ContaCorrente {
     private int qtdMes = 0;
     private int mesCorrente;
+    private double taxa = 0;
 
     public ContaSalario(int numeroConta, String titular, double saldo) {
         super(numeroConta, titular, saldo);
@@ -20,8 +21,6 @@ public class ContaSalario extends ContaCorrente {
         }
 
         try {
-            double taxa = 0;
-
             if (qtdMes == 0) {
                 qtdMes++;
             } else {
